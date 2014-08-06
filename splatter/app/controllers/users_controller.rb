@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
@@ -14,6 +14,15 @@ class UsersController < ApplicationController
 
     render json: @user
   end
+  
+  # GET /follows/1
+  # GET /follows/1.json
+  def show_follows
+  @user = User.find(params[:id])
+  
+  render json: @user
+  end
+  
 
   # POST /users
   # POST /users.json
