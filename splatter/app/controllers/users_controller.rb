@@ -15,14 +15,21 @@
     render json: @user
   end
   
-  # GET /follows/1
-  # GET /follows/1.json
+  # GET /users/follows/1
+  # GET /users/follows/1.json
   def show_follows
   @user = User.find(params[:id])
   
-  render json: @user
+  render json: @user.follows
   end
+
+  # GET /users/followers/1
+  # GET /users/followers/1.json
+  def show_followers
+  @user = User.find(params[:id])
   
+  render json: @user.followers
+  end
 
   # POST /users
   # POST /users.json
@@ -36,6 +43,9 @@
     end
   end
 
+  # POST /users/follows
+  # POST /users/follows.json
+  
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
@@ -56,6 +66,7 @@
 
     head :no_content
   end
+  
   def splatts
   @user = User.find(params[:id])
   render json: @user.splatts
