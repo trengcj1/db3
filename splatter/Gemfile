@@ -9,7 +9,8 @@ gem 'rails-api'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
-
+gem 'riak-client'
+gem 'hashie'
 
 
 # To use ActiveModel has_secure_password
@@ -26,3 +27,6 @@ gem 'sqlite3'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+#gem 'riak client'
+#gem 'hashie'
